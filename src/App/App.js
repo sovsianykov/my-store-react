@@ -1,15 +1,14 @@
-import React  from "react";
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { MainLayout } from "./Layout/containers/MainLayout/MainLayout";
-import { Routing } from "../Routing/Routing";
-import Navbar from "./Layout/containers/Navbar/Navbar";
+import { Routing } from "../Routing";
+import { Layout } from "../Layout";
 
 function App() {
   return (
     <BrowserRouter>
-      <MainLayout>
+      <Layout>
         <Routing />
-      </MainLayout>
+      </Layout>
     </BrowserRouter>
   );
 }
