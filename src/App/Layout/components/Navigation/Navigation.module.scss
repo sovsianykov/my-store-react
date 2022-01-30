@@ -1,0 +1,60 @@
+.appBar {
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(0deg, #04152a, #40688d 230%, #125091);
+  display: flex;
+  padding: 0 30px;
+  box-shadow: 0 0 2px #cccccc;
+  align-items: center;
+
+  .brandLogo {
+    .logoWrapper {
+      width: 100px;
+      height: 60px;
+      overflow: hidden;
+
+      .logo {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 30px;
+      letter-spacing: 0.1rem;
+      color: blanchedalmond;
+    }
+  }
+
+  .navigation {
+    position: absolute;
+    width: 400px;
+    right: 30px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    .navItem {
+      width: auto;
+
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 ;
+      color: #b7bcc5;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      cursor: pointer;
+        text-decoration: none;
+
+      &:hover,
+      .active {
+        color: #ffffff;
+        border-bottom: 2px solid blanchedalmond;
+      ;
+      }
+    }
+  }
+}
