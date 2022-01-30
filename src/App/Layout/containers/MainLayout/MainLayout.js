@@ -8,6 +8,7 @@ export const MainLayout = ({children}) => {
     <div className={styles.mainLayout}>
       <Navbar />
         {children}
+        <Footer/>
     </div>
   );
 };
