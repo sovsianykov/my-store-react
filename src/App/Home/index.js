@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './index.module.scss';
 import house from '../../@assests/img/Home-PNG-Images.png'
-import tree from '../../@assests/img/tree-clipart-transparent-15.png'
-import car from '../../@assests/img/NicePng_carpng_3406826.png'
+import tree from '../../@assests/img/house-transparent-background-6.png'
+import car from '../../@assests/img/300552.png'
 
 const Home = () => {
     return (
@@ -16,6 +16,9 @@ const Home = () => {
             <div className={styles.carWrapper}>
                 <img src={car} alt="house3" className={styles.carImg}/>
             </div>
+            <h1 className={styles.title}>
+               The Best House Money Can Buy!
+            </h1>
         </main>
     );
 };

@@ -10,20 +10,20 @@
     position: absolute;
     top: -100px;
     left: 500px;
-    animation: animationHome  1s forwards .3s ease-in-out;
+    animation: animationHome  1s forwards  2.1s ease-in-out;
     .houseImg {
       display: block;
       width: 100%;
     }
   }
   .treeWrapper {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     position: absolute;
     top: 200px;
     left: -300px;
-    animation: animationTree  1s forwards 2s ease-in-out;
+    animation: animationTree  1s forwards 3.4s ease-in-out;
 
     .treeImg {
       display: block;
@@ -37,12 +37,27 @@
     position: absolute;
     top: 240px;
     left: 1600px;
-    animation: animationCar  1s forwards 3s ease-in-out;
+    animation: animationCar  1s forwards 4.5s ease-in-out;
 
     .carImg {
       display: block;
       width: 100%;
     }
+  }
+  .title {
+    position: absolute;
+    left: 300px;
+    top: 210px;
+    font-size: 5px;
+    letter-spacing: .01em;
+    font-weight: 600;
+    color:#f1e7da;
+    animation: animationTitle  1s forwards  ease-in-out;
+
+  }
+  .btn {
+    position: absolute;
+
   }
 
 }
@@ -50,6 +65,9 @@
 @keyframes animationHome {
   from {
     top: -100px;
+  }
+  80% {
+    top: 220px;
   }
   to {
     top: 200px;
@@ -59,17 +77,41 @@
   from {
     left: -100px;
   }
+
   to {
-    left: 320px;
+    left: 200px;
   }
 }
 @keyframes animationCar {
   from {
     left: 1600px;
     top: -100px;
+
   }
   to {
     left: 700px;
-    top: 310px;
+    top: 210px;
+
   }
+
+}
+@keyframes animationTitle {
+  from {
+    left: 500px;
+    top: 210px;
+    font-size: 10px;
+    letter-spacing: .01em;
+  }
+  70% {
+    top: 460px;
+    left: 220px;
+    font-size: 50px;
+  }
+  to {
+    top: 370px;
+    left: 200px;
+    font-size: 45px;
+    letter-spacing: .07rem;
+  }
+
 }
