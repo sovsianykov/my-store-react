@@ -5,11 +5,12 @@ import cn from "classnames";
 
 export const NavigationItem = ({ item }) => {
   const location = useLocation();
+
   const classNames = useMemo(
     () =>
       cn({
         [styles.navItem]: true,
-        [styles.active]: location.pathname === item.path,
+        [styles.navItem_active]: location.pathname === item.path,
       }),
     [item.path, location.pathname]
   );

@@ -1,0 +1,75 @@
+.home {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  z-index: -1;
+  .houseWrapper {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: -100px;
+    left: 500px;
+    animation: animationHome  1s forwards .3s ease-in-out;
+    .houseImg {
+      display: block;
+      width: 100%;
+    }
+  }
+  .treeWrapper {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: 200px;
+    left: -300px;
+    animation: animationTree  1s forwards 2s ease-in-out;
+
+    .treeImg {
+      display: block;
+      width: 100%;
+    }
+  }
+  .carWrapper {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 240px;
+    left: 1600px;
+    animation: animationCar  1s forwards 3s ease-in-out;
+
+    .carImg {
+      display: block;
+      width: 100%;
+    }
+  }
+
+}
+
+@keyframes animationHome {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 200px;
+  }
+}
+@keyframes animationTree {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 320px;
+  }
+}
+@keyframes animationCar {
+  from {
+    left: 1600px;
+    top: -100px;
+  }
+  to {
+    left: 700px;
+    top: 310px;
+  }
+}

@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import { AppBar, BrandLogo, Navigation } from "../../components/Navigation";
+import {
+  AppBar,
+  BrandLogo,
+  CartIcon,
+  Navigation,
+} from "../Navigation";
 
 export const Header = () => {
   return (
@@ -8,6 +13,7 @@ export const Header = () => {
       <AppBar>
         <BrandLogo />
         <Navigation />
+        <CartIcon />
       </AppBar>
     </nav>
   );

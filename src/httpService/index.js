@@ -4,7 +4,9 @@ import { API_ACTION_FETCH } from "../App/Products/store/constants";
 class httpService {
   constructor() {
     let service = axios.create({
-      headers: { csrf: "token" },
+      headers: {
+        "Content-type":"application/json"
+      },
     });
     service.interceptors.response.use(this.handleSuccess, this.handleError);
     this.service = service;
