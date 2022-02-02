@@ -1,25 +1,20 @@
 import React from 'react';
 import styles from './index.module.scss';
-import house from '../../@assests/img/Home-PNG-Images.png'
-import tree from '../../@assests/img/house-transparent-background-6.png'
-import car from '../../@assests/img/300552.png'
+
 
 const Home = () => {
     return (
-        <main className={styles.home}>
-            <div className={styles.houseWrapper}>
-                <img src={house} alt="house" className={styles.houseImg}/>
+        <div className = {styles.wrapper}>
+            <div className={styles.content}>
+                <div className={styles.welcome}>Welcome to</div>
+
+                    <h1> Serge's Store </h1>
             </div>
-            <div className={styles.treeWrapper}>
-                <img src={tree} alt="house2" className={styles.treeImg}/>
+            <div className={styles.shade}/>
+            <div className={styles.card__bg__image}>
+                <img alt="" src="http://media.futurebutterflies.net/houston-besomeone.jpg"/>
             </div>
-            <div className={styles.carWrapper}>
-                <img src={car} alt="house3" className={styles.carImg}/>
-            </div>
-            <h1 className={styles.title}>
-               The Best House Money Can Buy!
-            </h1>
-        </main>
+        </div>
     );
 };
 

@@ -1,117 +1,103 @@
-.home {
-  width: 100%;
-  height: 80vh;
+
+
+.wrapper {
+  overflow: hidden;
+  display: block;
+  height: 100vh;
   position: relative;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .welcome {
+    font-family: Merienda, sans-serif;
+    font-size: 3em;
+    color: #fff;
+    display: block;
+    margin-right: 20px;
+  }
+  h1 {
+    font-family: 'Alex Brush',sans-serif;
+    color: #fff;
+    font-size: 9em;
+    text-shadow: 5px 4px 7px rgba(#000, .4);
+    display: block;
+  }
+
+}
+.shade {
+  position: absolute;
   z-index: -1;
-  .houseWrapper {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    position: absolute;
-    top: -100px;
-    left: 500px;
-    animation: animationHome  1s forwards  1s ease-in-out;
-    .houseImg {
-      display: block;
-      width: 100%;
-    }
-  }
-  .treeWrapper {
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    position: absolute;
-    top: 200px;
-    left: -300px;
-    animation: animationTree  1s forwards 2s ease-in-out;
-
-    .treeImg {
-      display: block;
-      width: 100%;
-    }
-  }
-  .carWrapper {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    position: absolute;
-    top: 240px;
-    left: 1600px;
-    animation: animationCar  1s forwards 3s ease-in-out;
-
-    .carImg {
-      display: block;
-      width: 100%;
-    }
-  }
-  .title {
-    position: absolute;
-    left: 300px;
-    top: 210px;
-    font-size: 5px;
-    letter-spacing: .01em;
-    font-weight: 600;
-    color:#f1e7da;
-    animation: animationTitle  .5s forwards  ease-in-out;
-
-  }
-  .btn {
-    position: absolute;
-
-  }
-
+  // background: rgba(blue,.6);
+  background: linear-gradient(180deg, rgba(#04152a, .6), rgba(#5386ce, .8) 62%, rgba(#9accf5, .4) 99%);
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.card__bg__image {
+  height: calc(100% + 30px);
+  width: calc(100% + 30px);
+  -webkit-animation: card-shift 12s ease-in-out infinite;
+  animation: card-shift 12s ease-in-out infinite;
+  position: absolute;
+  z-index: -3;
+  // height: 600px;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
 }
 
-@keyframes animationHome {
-  from {
-    top: -100px;
+.card__bg_image img {
+  object-fit: fill;
+}
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Merienda');
+
+@-webkit-keyframes card-shift {
+  0% {
+    -webkit-transform:translate3d(-30px,0,0);
+    transform:translate3d(-30px,0,0)
   }
-  80% {
-    top: 220px;
+  25% {
+    -webkit-transform:translate3d(0,-30px,0);
+    transform:translate3d(0,-30px,0)
+  }
+  50% {
+    -webkit-transform:translate3d(0,-30px,0);
+    transform:translate3d(0,-30px,0)
+  }
+  75% {
+    -webkit-transform:translate3d(-30px,0,0);
+    transform:translate3d(-30px,0,0)
   }
   to {
-    top: 200px;
+    -webkit-transform:translate3d(-30px,0,0);
+    transform:translate3d(-30px,0,0)
   }
 }
-@keyframes animationTree {
-  from {
-    left: -100px;
+@keyframes card-shift {
+  0% {
+    -webkit-transform:translate3d(-30px,0,0);
+    transform:translate3d(-30px,0,0)
   }
-
-  to {
-    left: 200px;
+  25% {
+    -webkit-transform:translate3d(0,-30px,0);
+    transform:translate3d(0,-30px,0)
   }
-}
-@keyframes animationCar {
-  from {
-    left: 1600px;
-    top: -100px;
-
+  50% {
+    -webkit-transform:translate3d(0,-30px,0);
+    transform:translate3d(0,-30px,0)
   }
-  to {
-    left: 700px;
-    top: 210px;
-
-  }
-
-}
-@keyframes animationTitle {
-  from {
-    left: 500px;
-    top: 210px;
-    font-size: 10px;
-    letter-spacing: .01em;
-  }
-  70% {
-    top: 460px;
-    left: 220px;
-    font-size: 50px;
+  75% {
+    -webkit-transform:translate3d(-30px,0,0);
+    transform:translate3d(-30px,0,0)
   }
   to {
-    top: 370px;
-    left: 200px;
-    font-size: 45px;
-    letter-spacing: .07rem;
+    -webkit-transform:translate3d(-30px,0,0);
+    transform:translate3d(-30px,0,0)
   }
-
 }
