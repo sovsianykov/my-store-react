@@ -1,10 +1,14 @@
 import { createSelector } from "reselect";
+import {cartSelector} from "../../Cart/store/cartSelector";
+const getCart = (state) => state.cartReducer.cart;
+const getHouses = (state) => state.housesReducer.data;
+const getCurrentPage = (state) => state.housesReducer.currentPage;
+
 export const productsSelector = createSelector(
-  (state) => state.housesReducer,
-  (state) => {
+  [cartSelector, getHouses, getCurrentPage],
+
+  ({cart}, { houses, isLoading, error }, currentPage) => {
     let items = [];
-    const { houses, isLoading, error } = state.data;
-    const { cart, currentPage } = state;
     const totalProducts = houses.length;
     for (const house of houses) {
       if (cart.includes(house)) {

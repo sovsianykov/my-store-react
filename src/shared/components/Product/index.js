@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from "react";
 import styles from "./Product.module.scss";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../App/Products/store/actions";
+import { addToCart } from "../../../App/Cart/store/actions";
 import cn from "classnames";
 
 export const Product = ({ house }) => {

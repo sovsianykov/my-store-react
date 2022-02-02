@@ -1,9 +1,8 @@
 import { products } from "./utils";
-import {ADD_TO_CART, API_ACTION_FETCH, SET_PAGE} from "./constants";
+import { API_ACTION_FETCH, SET_PAGE} from "./constants";
 
 const initialState = {
   data: products,
-  cart: [],
   currentPage: 1,
 };
 
@@ -24,11 +23,6 @@ export const housesReducer = (state = initialState, action) => {
         ...state,
 
         data: { ...products, isLoading: false, error: action.payload },
-      };
-    case ADD_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, action.payload],
       };
     case SET_PAGE:
       return {
