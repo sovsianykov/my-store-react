@@ -1,6 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": "src"
+    "target": "esnext",
+    "checkJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@cart": ["./App/Cart"]
+    }
   },
-  "include": ["src"]
+  "include": [
+    "./src/**/*",
+    "./test/**/*"
+  ]
 }

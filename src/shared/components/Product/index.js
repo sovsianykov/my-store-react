@@ -1,14 +1,15 @@
 import React, { useCallback, useMemo } from "react";
-import styles from "./Product.module.scss";
+import styles from "./index.module.scss";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../../App/Cart/store/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "@/App/Cart/store/actions";
 import cn from "classnames";
+import { cartSelector } from "@/App/Cart/store/cartSelector";
 
 export const Product = ({ house }) => {
   const dispatch = useDispatch();
+  const { cart } = useSelector(cartSelector);
   const onClickHandler = useCallback(() => {
-    house.quantity++;
     dispatch(addToCart(house));
   }, [dispatch, house]);
 
@@ -16,9 +17,9 @@ export const Product = ({ house }) => {
     () =>
       cn({
         [styles.product]: true,
-        [styles.product_active]: house.quantity,
+        [styles.product_active]: cart.includes(house),
       }),
-    [house.quantity]
+    [cart, house]
   );
 
   return (
@@ -28,7 +29,7 @@ export const Product = ({ house }) => {
       </div>
       <div className={styles.content}>
         <span className={styles.title}>{house.title}</span>
-        <span > {`price:  $${house.price}`}</span>
+        <span> {`price:  $${house.price}`}</span>
         <div className={styles.cartPlusIcon} onClick={onClickHandler}>
           <AddShoppingCartIcon className={styles.icon} />
         </div>

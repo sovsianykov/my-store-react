@@ -1,11 +1,11 @@
 import axios from "axios";
-import { API_ACTION_FETCH } from "../App/Products/store/constants";
+import { API_ACTION_FETCH } from "@/App/Products/store/constants";
 
 class httpService {
   constructor() {
     let service = axios.create({
       headers: {
-        "Content-type":"application/json"
+        "Content-type": "application/json",
       },
     });
     service.interceptors.response.use(this.handleSuccess, this.handleError);

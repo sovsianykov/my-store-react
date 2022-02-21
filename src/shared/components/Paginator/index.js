@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import styles from "./index.module.scss";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
-import { setPage } from "../../../App/Products/store/actions";
+import { setPage } from "@/App/Products/store/actions";
 
 export const Paginator = ({ totalProducts, itemsPerPage }) => {
   const [currentPage, setCurrentPage] = useState(1);
