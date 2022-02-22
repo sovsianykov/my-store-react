@@ -15,7 +15,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1vw;
         width: 100%;
-        margin-top: 85px;
+        margin-top: 45px;
         @media screen and (max-width: 1200px) {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -31,6 +31,10 @@
   }
   .buttonsTool {
     width: 100%;
+    padding: 5px;
+    height: 60px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
