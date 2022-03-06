@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import styles from "./index.module.scss";
 import { useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../../store/actions";
-import { Add, Remove } from "@mui/icons-material";
+import { AddTwoTone, Remove } from "@mui/icons-material";
 
 export const CartProduct = ({ house }) => {
   const dispatch = useDispatch();
@@ -23,12 +23,13 @@ export const CartProduct = ({ house }) => {
       <div className={styles.content}>
         <span className={styles.title}>{house.title}</span>
         <span> {`price:  $${house.price}`}</span>
-        <div className={styles.cartPlusIcon} onClick={onAddClickHandler}>
-          <Add className={styles.icon} />
-        </div>
-        <span> {`${house.quantity}`}</span>
+
         <div className={styles.cartPlusIcon} onClick={onRemoveClickHandler}>
           <Remove className={styles.icon} />
+        </div>
+        <span> {`${house.quantity}`}</span>
+        <div className={styles.cartPlusIcon} onClick={onAddClickHandler}>
+          <AddTwoTone className={styles.icon} />
         </div>
       </div>
     </section>

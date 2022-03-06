@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { cartSelector } from "../store/cartSelector";
 import Button from "@/shared/components/Button";
 import { cleanCart } from "@/App/Cart/store/actions";
+import {appRouter} from "@/App/Routing/appRouter";
+import {Link} from "react-router-dom";
 
 const FilledCart = () => {
   const { sortedCart, totalAmount } = useSelector(cartSelector);
@@ -19,6 +21,14 @@ const FilledCart = () => {
         <div className={styles.totalAmount}>
           <h3>{` Total amount $${totalAmount}`}</h3>
         </div>
+          <div className={styles.buttonsTool}>
+              <Link to={appRouter.Products}>
+                  <Button onClick={onCleanHandler}>Clean The Cart</Button>
+              </Link>
+              <Link to={appRouter.Order}>
+                  <Button >Make the order</Button>
+              </Link>
+          </div>
         <div className={styles.products}>
           {sortedCart.map((house) => (
             <div className={styles.product} key={house.id}>
@@ -26,10 +36,6 @@ const FilledCart = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className={styles.buttonsTool}>
-        <Button onClick={onCleanHandler}>Clean The Cart</Button>
-        <Button onClick={onCleanHandler}>Make the order</Button>
       </div>
     </main>
   );

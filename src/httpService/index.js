@@ -1,5 +1,6 @@
 import axios from "axios";
 import { API_ACTION_FETCH } from "@/App/Products/store/constants";
+import {appRouter} from "@/App/Routing/appRouter";
 
 class httpService {
   constructor() {
@@ -19,7 +20,7 @@ class httpService {
   handleError = (error) => {
     switch (error.response.status) {
       case 401:
-        this.redirectTo(document, "/");
+        this.redirectTo(document, appRouter.Home);
         break;
       case 404:
         this.redirectTo(document, "/404");

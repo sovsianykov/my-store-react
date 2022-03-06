@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom/";
-import Products from "../Products/containers";
-import Cart from "@cart/containers";
-import Home from "../Home";
 import { appRouter } from "@/App/Routing/appRouter";
+import Cart from "@/App/Cart/containers";
+import Home from "@/App/Home";
+import Products from "@/App/Products/containers";
+import Order from "@/App/Order/containers";
 
 export const Routing = () => {
   return (
@@ -12,7 +13,7 @@ export const Routing = () => {
       <Route path={appRouter.Products} element={<Products />} />
       <Route path={appRouter.Cart} element={<Cart />} />
       {/*<Route path="/about" element={<About />} />*/}
-      {/*<Route exact path="/order" element={<Order />} />*/}
+      <Route  path={appRouter.Order} element={<Order />} />
     </Routes>
   );
 };
