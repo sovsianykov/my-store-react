@@ -1,22 +1,19 @@
-import React, { useCallback, useState } from "react";
+import React, {memo, useCallback, useState} from "react";
 import styles from "../index.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { cartSelector } from "@/App/Cart/store/cartSelector";
 import OrderItem from "@/App/Order/components/OrderItem";
 import Button from "@/shared/components/Button";
-import { addOrder, resetOrders } from "@/App/Order/store/actions";
+import { postOrder, resetOrders} from "@/App/Order/store/actions";
 import { cleanCart } from "@/App/Cart/store/actions";
+import { initialOrder } from "@/App/Order/constants";
 
-const initialOrder = {
-  name: "",
-  lastName: "",
-  email: "",
-  cart: [],
-  totalAmount: 0,
-};
+
 const Order = () => {
+
   const { sortedCart, totalAmount } = useSelector(cartSelector);
   const [order, setOrder] = useState(initialOrder);
+
   const onChangeHandler = useCallback(
     (e) => {
       const newOrder = {
@@ -30,20 +27,21 @@ const Order = () => {
     },
     [order, sortedCart, totalAmount]
   );
+
   const dispatch = useDispatch();
+
   const onSubmitHandler = useCallback(() => {
-    dispatch(addOrder(order));
-    console.log(order);
+    dispatch(postOrder(order));
   }, [dispatch, order]);
+
   const onResetHandler = useCallback(() => {
     setOrder(initialOrder);
     dispatch(resetOrders());
     dispatch(cleanCart());
   }, [dispatch]);
-  const { orders } = useSelector((state) => state.orderReducer);
-  console.log(orders);
+
   return (
-    <section className={styles.container}>
+    <main className={styles.container}>
       <h4 className={styles.orderTitle}>Your order is</h4>
       <form className={styles.order}>
         <label htmlFor="name">Name:</label>
@@ -77,14 +75,14 @@ const Order = () => {
         ))}
       </form>
       <div className={styles.totalAmount}>
-        <h3>{` Total amount $${totalAmount}`}</h3>
-        <div className={styles.btnBlock}>
+        <h3>{ `Total amount $${totalAmount}` }</h3>
+        <section className={styles.btnBlock}>
           <Button onClick={onSubmitHandler}>order</Button>
           <Button onClick={onResetHandler}> reset orders </Button>
-        </div>
+        </section>
       </div>
-    </section>
+    </main>
   );
 };
 
-export default Order;
+export default memo(Order);

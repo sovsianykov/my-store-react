@@ -109,7 +109,7 @@
       "id": 16,
       "title": "house16",
       "price": 535000,
-      "quantity":0,
+      "quantity": 0,
       "img": "https://3.bp.blogspot.com/-7TZ21vdN8GI/WRGsPB9sVAI/AAAAAAABBes/NqQhUdJxRNol7sZ61jy8Wh1yJAzqQ0BqwCLcB/s1600/cute-little-home-india.jpg"
     },
     {
@@ -161,6 +161,32 @@
       "quantity": 0,
       "img": "https://www.99homeplans.com/wp-content/uploads/2017/12/modern-indian-house-design-with-3d-elevations-2-floor-traditional-home.jpg"
     }
-
+  ],
+  "orders": [
+    {
+      "name": "Serhii",
+      "lastName": "Ovsianykov",
+      "email": "ovsianikoff@gmail.com",
+      "cart": [
+        {
+          "id": 10,
+          "title": "house10",
+          "price": 95000,
+          "quantity": 1,
+          "img": "https://i.pinimg.com/originals/88/8a/8c/888a8c34591c48dbb062716aebc66e11.jpg",
+          "cartId": "4919389f-e80f-4827-b719-061ba03059b7"
+        },
+        {
+          "id": 11,
+          "title": "house11",
+          "price": 85000,
+          "quantity": 1,
+          "img": "https://2.bp.blogspot.com/--HYvd42nTbM/T5Rdm4lGJfI/AAAAAAAALjg/LkELubU4McA/s1600/Modern+small+homes+designs.+(3).jpg",
+          "cartId": "4c109581-b59f-40bb-8045-605455821b3a"
+        }
+      ],
+      "totalAmount": 180000,
+      "id": "9bf8c47a-aee3-4a1e-b265-da801591b4b7"
+    }
   ]
 }

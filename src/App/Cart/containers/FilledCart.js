@@ -26,7 +26,7 @@ const FilledCart = () => {
                   <Button onClick={onCleanHandler}>Clean The Cart</Button>
               </Link>
               <Link to={appRouter.Order}>
-                  <Button >Make the order</Button>
+                  <Button onClick={() => null} >Make the order</Button>
               </Link>
           </div>
         <div className={styles.products}>

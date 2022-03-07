@@ -1,6 +1,7 @@
 import axios from "axios";
 import { API_ACTION_FETCH } from "@/App/Products/store/constants";
-import {appRouter} from "@/App/Routing/appRouter";
+import { appRouter } from "@/App/Routing/appRouter";
+import {ADD_ORDER, POST_ORDERS} from "@/App/Order/store/constants";
 
 class httpService {
   constructor() {
@@ -23,7 +24,8 @@ class httpService {
         this.redirectTo(document, appRouter.Home);
         break;
       case 404:
-        this.redirectTo(document, "/404");
+        console.log(error)
+        // this.redirectTo(document, "/");
         break;
       default:
         this.redirectTo(document, "/500");
@@ -59,11 +61,11 @@ class httpService {
     return this.service
       .request({
         method: "POST",
-        url: path,
+        url: `${process.env.REACT_APP_BASE_URL}${path}`,
         responseType: "json",
         data: payload,
       })
-      .then((response) => callback(response.status, response.data));
+      .then((response) => callback({type: POST_ORDERS, payload: response.data}));
   }
 }
 
