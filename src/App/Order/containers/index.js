@@ -77,7 +77,7 @@ const Order = () => {
       <div className={styles.totalAmount}>
         <h3>{ `Total amount $${totalAmount}` }</h3>
         <section className={styles.btnBlock}>
-          <Button onClick={onSubmitHandler}>order</Button>
+          <Button onClick={onSubmitHandler}> send order</Button>
           <Button onClick={onResetHandler}> reset orders </Button>
         </section>
       </div>
