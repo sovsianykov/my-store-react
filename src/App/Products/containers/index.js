@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import styles from "./index.module.scss";
 import { useSelector } from "react-redux";
-import { Product } from "@/shared/components/Product";
+import  Product  from "@/shared/components/Product";
 import { productsSelector } from "../store/productsSelector";
-import { Paginator } from "@/shared/components/Paginator";
+import Paginator from "@/shared/components/Paginator";
 import { v4 as uuid } from "uuid";
 
 const Products = () => {

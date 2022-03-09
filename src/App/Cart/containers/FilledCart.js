@@ -1,6 +1,6 @@
 import React, { memo, useCallback } from "react";
 import styles from "./index.module.scss";
-import { CartProduct } from "../componens/CartProduct";
+import  CartProduct from "../componens/CartProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { cartSelector } from "../store/cartSelector";
 import Button from "@/shared/components/Button";
