@@ -1,10 +1,10 @@
-import React, { useCallback } from "react";
+import React, {memo, useCallback} from "react";
 import styles from "./index.module.scss";
 import { useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../../store/actions";
 import { AddTwoTone, Remove } from "@mui/icons-material";
 
-export const CartProduct = ({ house }) => {
+ const CartProduct = ({ house }) => {
   const dispatch = useDispatch();
 
   const onAddClickHandler = useCallback(() => {
@@ -35,3 +35,4 @@ export const CartProduct = ({ house }) => {
     </section>
   );
 };
+export default memo(CartProduct)

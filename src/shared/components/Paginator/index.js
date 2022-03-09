@@ -1,10 +1,10 @@
-import React, { useCallback, useState } from "react";
+import React, {memo, useCallback, useState} from "react";
 import styles from "./index.module.scss";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
 import { setPage } from "@/App/Products/store/actions";
 
-export const Paginator = ({ totalProducts, itemsPerPage }) => {
+ const Paginator = ({ totalProducts, itemsPerPage }) => {
   const [currentPage, setCurrentPage] = useState(1);
   let pages = [];
   for (let i = 1; i <= Math.ceil(totalProducts / itemsPerPage ); i++) {
@@ -48,3 +48,5 @@ export const Paginator = ({ totalProducts, itemsPerPage }) => {
     </section>
   );
 };
+
+ export default memo(Paginator);
