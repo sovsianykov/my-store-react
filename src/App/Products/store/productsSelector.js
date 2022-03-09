@@ -1,6 +1,5 @@
 import { createSelector } from "reselect";
 import {cartSelector} from "../../Cart/store/cartSelector";
-const getCart = (state) => state.cartReducer.cart;
 const getHouses = (state) => state.housesReducer.data;
 const getCurrentPage = (state) => state.housesReducer.currentPage;
 

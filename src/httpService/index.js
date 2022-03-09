@@ -1,7 +1,7 @@
 import axios from "axios";
 import { API_ACTION_FETCH } from "@/App/Products/store/constants";
 import { appRouter } from "@/App/Routing/appRouter";
-import {ADD_ORDER, POST_ORDERS} from "@/App/Order/store/constants";
+import { POST_ORDERS} from "@/App/Order/store/constants";
 
 class httpService {
   constructor() {
