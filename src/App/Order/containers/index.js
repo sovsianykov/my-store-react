@@ -1,15 +1,18 @@
-import React, {memo, useCallback, useState} from "react";
+import React, { memo, useCallback, useState } from "react";
 import styles from "../index.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { cartSelector } from "@/App/Cart/store/cartSelector";
 import OrderItem from "@/App/Order/components/OrderItem";
 import Button from "@/shared/components/Button";
-import { postOrder, resetOrders} from "@/App/Order/store/actions";
+import { postOrder, resetOrders } from "@/App/Order/store/actions";
 import { cleanCart } from "@/App/Cart/store/actions";
 import { initialOrder } from "@/App/Order/constants";
-
+import { ordersSelector } from "@/App/Order/store/ordersSelector";
+import { useFetchOrders } from "@/hooks/useFetch";
 
 const Order = () => {
+  useFetchOrders();
+  console.log(useSelector(ordersSelector));
 
   const { sortedCart, totalAmount } = useSelector(cartSelector);
   const [order, setOrder] = useState(initialOrder);
@@ -75,7 +78,7 @@ const Order = () => {
         ))}
       </form>
       <div className={styles.totalAmount}>
-        <h3>{ `Total amount $${totalAmount}` }</h3>
+        <h3>{`Total amount $${totalAmount}`}</h3>
         <section className={styles.btnBlock}>
           <Button onClick={onSubmitHandler}> send order</Button>
           <Button onClick={onResetHandler}> reset orders </Button>
