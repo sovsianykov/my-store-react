@@ -5,7 +5,6 @@ import  Product  from "@/shared/components/Product";
 import { productsSelector } from "../store/productsSelector";
 import Paginator from "@/shared/components/Paginator";
 import { v4 as uuid } from "uuid";
-import {CircularProgress} from "@mui/material";
 
 const Products = () => {
   const { houses, isLoading, error, totalProducts } = useSelector(productsSelector);
@@ -13,7 +12,7 @@ const Products = () => {
     <section className={styles.products}>
       <Paginator itemsPerPage={8} totalProducts={totalProducts} />
       {isLoading && error ? (
-        <CircularProgress/>
+        <h5>Loading...</h5>
       ) : (
         houses.map((house) => (
           <div className={styles.product} key={uuid()}>
