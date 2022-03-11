@@ -10,7 +10,7 @@ export const BrandLogo = () => {
       <div className={styles.logoWrapper}>
         <img src={logo} alt="logo" className={styles.logo} />
       </div>
-      <h1 className={styles.title}>Houses of your Dream</h1>
+      <h1 className={styles.title}>Dreams Houses</h1>
     </Link>
   );
 };
