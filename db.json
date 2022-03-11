@@ -163,38 +163,6 @@
     }
   ],
   "orders": [
-    {
-      "name": "Serhii",
-      "lastName": "Ovsianykov",
-      "email": "ovsianikoff@gmail.com",
-      "cart": [
-        {
-          "id": 10,
-          "title": "house10",
-          "price": 95000,
-          "quantity": 1,
-          "img": "https://i.pinimg.com/originals/88/8a/8c/888a8c34591c48dbb062716aebc66e11.jpg",
-          "cartId": "4919389f-e80f-4827-b719-061ba03059b7"
-        },
-        {
-          "id": 11,
-          "title": "house11",
-          "price": 85000,
-          "quantity": 1,
-          "img": "https://2.bp.blogspot.com/--HYvd42nTbM/T5Rdm4lGJfI/AAAAAAAALjg/LkELubU4McA/s1600/Modern+small+homes+designs.+(3).jpg",
-          "cartId": "4c109581-b59f-40bb-8045-605455821b3a"
-        }
-      ],
-      "totalAmount": 180000,
-      "id": "9bf8c47a-aee3-4a1e-b265-da801591b4b7"
-    },
-    {
-      "name": "",
-      "lastName": "",
-      "email": "",
-      "cart": [],
-      "totalAmount": 0,
-      "id": "427e1613-8db4-4f4a-8576-014da2d057b3"
-    }
+
   ]
 }
