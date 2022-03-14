@@ -33,8 +33,8 @@
     ]
   },
   "scripts": {
-    "server": "json-server --watch db.json --port 3004 --routes routes.json",
-    "start": "craco start",
+    "server": "json-server --watch db.json --port 3000 --routes routes.json",
+    "start": " set PORT=8000 &&  craco start",
     "dev": "concurrently \"npm start\" \"npm run server\"",
     "build": "craco build",
     "test": "react-scripts test",
