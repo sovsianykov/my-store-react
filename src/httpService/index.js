@@ -8,8 +8,7 @@ class httpService {
     let service = axios.create({
       headers: {
         "Content-type": "application/json",
-        "Access-Control-Request-Headers": "*",
-        "Access-Control-Request-Method": "*",
+        'Access-Control-Allow-Origin': '*'
       },
     });
     service.interceptors.response.use(this.handleSuccess, this.handleError);
