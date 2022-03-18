@@ -26,7 +26,6 @@ class httpService {
         break;
       case 404:
         console.log(error)
-        // this.redirectTo(document, "/");
         break;
       default:
         this.redirectTo(document, "/500");

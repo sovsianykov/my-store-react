@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navigation.module.scss";
-import logo from "../../../@assests/img/logo.png";
+import logo from "../../../assests/img/logo.png";
 import { Link } from "react-router-dom";
 import { appRouter } from "@/App/Routing/appRouter";
 
