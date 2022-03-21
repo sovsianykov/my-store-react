@@ -1,0 +1,19 @@
+.about {
+  margin: 120px auto;
+  max-width: 1100px;
+  .title {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #07325d;
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+  .description {
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px ;
+    letter-spacing: .05rem;
+    color: #414242;
+  }
+}

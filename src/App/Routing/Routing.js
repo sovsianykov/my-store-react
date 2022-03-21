@@ -5,6 +5,7 @@ import Cart from "@/App/Cart/containers";
 import Home from "@/App/Home";
 import Products from "@/App/Products/containers";
 import Order from "@/App/Order/containers";
+import About from "@/App/About";
 
 export const Routing = () => {
   return (
@@ -12,7 +13,7 @@ export const Routing = () => {
       <Route path={appRouter.Home} element={<Home />} />
       <Route path={appRouter.Products} element={<Products />} />
       <Route path={appRouter.Cart} element={<Cart />} />
-      {/*<Route path="/about" element={<About />} />*/}
+      <Route path={appRouter.About} element={<About />} />
       <Route  path={appRouter.Order} element={<Order />} />
     </Routes>
   );
