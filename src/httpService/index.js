@@ -9,7 +9,8 @@ class httpService {
       headers: {
         "Content-type": "application/json",
         'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': '*'
+    'Access-Control-Allow-Methods': '*',
+        'Access-Control-Expose-Headers': "*"
       },
     });
     service.interceptors.response.use(this.handleSuccess, this.handleError);
