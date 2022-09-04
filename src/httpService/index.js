@@ -1,16 +1,16 @@
 import axios from "axios";
 import { API_ACTION_FETCH } from "@/App/Products/store/constants";
 import { appRouter } from "@/App/Routing/appRouter";
-import { POST_ORDERS} from "@/App/Order/store/constants";
+import { POST_ORDERS } from "@/App/Order/store/constants";
 
 class httpService {
   constructor() {
     let service = axios.create({
       headers: {
         "Content-type": "application/json",
-        'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': '*',
-        'Access-Control-Expose-Headers': "*"
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,POST",
+        "Access-Control-Expose-Headers": "*",
       },
     });
     service.interceptors.response.use(this.handleSuccess, this.handleError);
@@ -27,7 +27,7 @@ class httpService {
         this.redirectTo(document, appRouter.Home);
         break;
       case 404:
-        console.log(error)
+        console.log(error);
         break;
       default:
         this.redirectTo(document, "/500");
@@ -67,7 +67,9 @@ class httpService {
         responseType: "json",
         data: payload,
       })
-      .then((response) => callback({type: POST_ORDERS, payload: response.data}));
+      .then((response) =>
+        callback({ type: POST_ORDERS, payload: response.data })
+      );
   }
 }
 

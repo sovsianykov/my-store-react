@@ -9,7 +9,7 @@ export const EmptyCart = () => {
     <section className={styles.cart}>
       <h1 className={styles.title}>There's no items</h1>
       <NavLink to={appRouter.Products}>
-        <Button>Please, order something!</Button>
+        <Button testid='btn'>Please, order something!</Button>
       </NavLink>
     </section>
   );

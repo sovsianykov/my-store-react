@@ -163,6 +163,54 @@
     }
   ],
   "orders": [
-
+    {
+      "name": "",
+      "lastName": "",
+      "email": "",
+      "cart": [],
+      "totalAmount": 0,
+      "id": "b64244cf-8e34-466b-834b-2596b7a5c69a"
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "email": "",
+      "cart": [],
+      "totalAmount": 0,
+      "id": "62c02cbb-41db-4b05-92b9-6b457ab4b4db"
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "email": "",
+      "cart": [],
+      "totalAmount": 0,
+      "id": "137f3095-32a2-4de9-a808-7bd03b642335"
+    },
+    {
+      "name": "Serhii",
+      "lastName": "Ovs",
+      "email": "Ovs@gmail.com",
+      "cart": [
+        {
+          "id": 3,
+          "title": "house3",
+          "price": 85000,
+          "quantity": 1,
+          "img": "https://pinoyhousedesigns.com/wp-content/uploads/2020/11/IM-01-25.jpg",
+          "cartId": "de502217-fe13-4432-9240-6512f1340eb2"
+        },
+        {
+          "id": 7,
+          "title": "house7",
+          "price": 375000,
+          "quantity": 1,
+          "img": "https://i.pinimg.com/736x/51/31/dc/5131dcf871e5e5fdf755aa1eb719d149--interiordesign-modern-homes.jpg",
+          "cartId": "0ec27aa5-3a36-4359-aaed-4250e023ebb6"
+        }
+      ],
+      "totalAmount": 460000,
+      "id": "eec266d9-0088-4396-aca3-7762afb6fb49"
+    }
   ]
 }

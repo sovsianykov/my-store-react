@@ -8,7 +8,7 @@ const Button = ({children, onClick}) => {
     },[onClick])
 
     return (
-        <div className={styles.btn}  onClick={onClickHandler}>
+        <div role='button' testId ={1}  className={styles.btn}  onClick={onClickHandler}>
             {children}
         </div>
     );

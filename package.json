@@ -33,9 +33,9 @@
     ]
   },
   "scripts": {
-    "server": "json-server --watch db.json --port 3004 --routes routes.json",
+    "server": "json-server --watch db.json --port 3000 --routes routes.json",
     "dev": " craco start",
-    "start": "concurrently \"npm run dev\" \"npm run server\"",
+    "start": " PORT=3001  concurrently \"npm run dev\" \"npm run server\"",
     "build": "craco build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
